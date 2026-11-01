@@ -1,15 +1,16 @@
 {
-  "name": "ai-chatbot",
+  "name": "ai-chatbot-backend",
   "version": "1.0.0",
-  "main": "index.js",
+ "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node --watch server.js",
+     "dev": "node --watch server.js",
+    "start": "node server.js",
+    "build": "node -e \"console.log('No build step required')\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "AI chatbot backend",
   "dependencies": {
     "@google/genai": "^1.15.0",
     "dotenv": "^17.2.1",
