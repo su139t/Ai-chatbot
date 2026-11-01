@@ -6,7 +6,7 @@ const { Server } = require("socket.io");
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: "https://ai-chatbot-rust-six.vercel.app",
   },
 });
 
@@ -29,6 +29,10 @@ io.on("connection", (socket) => {
 
 app.get("/", (req, res) => {
   res.send("Hello World");
+});
+
+app.get("/health", (req, res) => {
+  res.send("health check route");
 });
 
 httpServer.listen(3000, () => {
